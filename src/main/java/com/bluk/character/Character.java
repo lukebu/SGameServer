@@ -21,7 +21,7 @@ public class Character {
     private String characterClass;
 
     /*depend on the class parameters*/
-
+    private int characterStrength;
 
 
 
