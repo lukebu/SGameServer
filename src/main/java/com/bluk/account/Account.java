@@ -1,5 +1,4 @@
 package com.bluk.account;
-
 import java.util.LinkedList;
 
 public class Account {

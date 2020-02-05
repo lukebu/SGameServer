@@ -5,5 +5,4 @@ public enum Race {
     ORC,
     ELF,
     DWARF;
-
 }
