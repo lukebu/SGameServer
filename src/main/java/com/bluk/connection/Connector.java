@@ -4,16 +4,25 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Properties;
 
 public class Connector {
 
     private Connection c = null;
     private Statement stmt = null;
 
+    String url = "jdbc:postgresql://localhost/postgres";
+
     public void createConnectionToDb() {
+
+        Properties  properties =  new Properties();
+        properties.setProperty("user", "postgres");
+        properties.setProperty("password", "zaq12wsx");
+        properties.setProperty("ssl","false");
+
         try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:file:C:\\Prywatne\\db\\wmt.db");
+            //Class.forName("org.postgresql.Driver");
+            c = DriverManager.getConnection(url,properties);
             c.setAutoCommit(false);
             System.out.println("Opened database successfully!!!");
         } catch (Exception e) {
@@ -46,7 +55,6 @@ public class Connector {
         }
         return result;
     }
-
 
     public void closeConnectionWithCommit() {
         try {

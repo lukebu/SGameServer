@@ -13,10 +13,6 @@ public class AccountSettings {
     private AccountSettings() {
     }
 
-    public Boolean getAccountMusic(){
-        return this.accountMusic;
-    }
-
     public static AccountSettingBuilder builder() {
         return new AccountSettingBuilder();
     }
@@ -56,15 +52,5 @@ public class AccountSettings {
 
             return accountSettings;
         }
-
-
-
-
     }
-
-
-
-
-
-
 }

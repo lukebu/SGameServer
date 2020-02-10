@@ -24,6 +24,15 @@ public class Account {
         return accountSettings;
     }
 
+    private AccountSettings createSettings(){
+        return accountSettings = AccountSettings.builder()
+                .accountMusic(Boolean.TRUE)
+                .soundEffect(Boolean.TRUE)
+                .blockInvitationFromFriends(Boolean.FALSE)
+                .staminaRestoredNotify(Boolean.FALSE)
+                .build();
+    }
+
     public static AccountBuilder builder(){
         return new AccountBuilder();
     }
@@ -89,7 +98,7 @@ public class Account {
             account.accountName = this.accountName;
             account.accountEmail = this.accountEmail;
             account.accountPassword = this.accountPassword;
-            account.accountSettings = this.accountSettings;
+            account.accountSettings = account.createSettings();
 
             return account;
         }
