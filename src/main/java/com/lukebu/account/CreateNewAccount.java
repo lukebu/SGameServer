@@ -13,7 +13,7 @@ public class CreateNewAccount {
                 .accountAvatarId(1)
                 .accountEmail("aaaa@bbb.pl")
                 .accountPassword("PASS")
-                .build();
+                .buildAccount();
     }
 
     public static void main(String[] args) {

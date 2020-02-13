@@ -16,14 +16,6 @@ public class Account {
     private Account(){
     }
 
-    public String getAccountName() {
-        return accountName;
-    }
-
-    public AccountSettings getAccountSettings() {
-        return accountSettings;
-    }
-
     private AccountSettings createSettings(){
         return accountSettings = AccountSettings.builder()
                 .accountMusic(Boolean.TRUE)
@@ -83,14 +75,14 @@ public class Account {
             return this;
         }
 
-        public Account build() {
-            if (accountName.isEmpty()) {
+        public Account buildAccount() {
+            /*if (accountName.isEmpty()) {
                 throw new IllegalStateException("Name cannot be empty");
             }
 
             if (accountEmail.isEmpty()) {
                 throw new IllegalStateException("E-mail cannot be empty");
-            }
+            }*/
 
             Account account = new Account();
             account.accountId = this.accountId;
