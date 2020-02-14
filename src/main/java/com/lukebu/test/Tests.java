@@ -42,6 +42,8 @@ public class Tests {
         tests.createAcc();
         tests.createCharacter();
         tests.processAbility.learnAbility( tests.ability, tests.character);
+        tests.processAbility.getCharacters(tests.account);
+
     }
 
 }

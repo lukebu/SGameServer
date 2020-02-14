@@ -11,18 +11,14 @@ public class Connector {
     private Connection c = null;
     private Statement stmt = null;
 
-    String url = "jdbc:postgresql://localhost/postgres";
+    String urlMaria = "jdbc:mariadb://localhost:3306/sgame?user=root&password=zaq12wsx";
+
 
     public void createConnectionToDb() {
 
-        Properties  properties =  new Properties();
-        properties.setProperty("user", "postgres");
-        properties.setProperty("password", "zaq12wsx");
-        properties.setProperty("ssl","false");
-
         try {
-            //Class.forName("org.postgresql.Driver");
-            c = DriverManager.getConnection(url,properties);
+            Class.forName("org.mariadb.jdbc.Driver");
+            c = DriverManager.getConnection(urlMaria);
             c.setAutoCommit(false);
             System.out.println("Opened database successfully!!!");
         } catch (Exception e) {
@@ -65,7 +61,6 @@ public class Connector {
 
         } catch (Exception e) {
             System.out.println(e.getClass().getName() + ": " + e.getMessage());
-            System.exit(0);
         }
     }
 }

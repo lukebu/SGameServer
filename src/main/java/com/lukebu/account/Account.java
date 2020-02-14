@@ -16,6 +16,14 @@ public class Account {
     private Account(){
     }
 
+    public int getAccountId() {
+        return accountId;
+    }
+
+    public String getAccountName() {
+        return accountName;
+    }
+
     private AccountSettings createSettings(){
         return accountSettings = AccountSettings.builder()
                 .accountMusic(Boolean.TRUE)
