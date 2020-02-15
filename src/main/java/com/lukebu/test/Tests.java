@@ -29,20 +29,14 @@ public class Tests {
                 .buildAbility();
     }
 
-    private Account createAcc() {
-        return account = Account.builder()
-                .accountId(1)
-                .buildAccount();
-    }
+
 
     public static void main(String[] args) {
 
         Tests tests = new Tests();
         tests.learnAbility();
-        tests.createAcc();
         tests.createCharacter();
         tests.processAbility.learnAbility( tests.ability, tests.character);
-        tests.processAbility.getCharacters(tests.account);
 
     }
 

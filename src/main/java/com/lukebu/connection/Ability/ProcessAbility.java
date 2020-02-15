@@ -1,10 +1,7 @@
 package com.lukebu.connection.Ability;
 import com.lukebu.ability.Ability;
-import com.lukebu.account.Account;
 import com.lukebu.character.Character;
 import com.lukebu.connection.Connector;
-
-import java.sql.ResultSet;
 
 public class ProcessAbility {
 
@@ -12,9 +9,6 @@ public class ProcessAbility {
     private Character character;
     private Connector connector = new Connector();
     private String processStatus = "0";
-    private Account account;
-    private ResultSet resultSet;
-
 
     public String learnAbility(Ability ability, Character character) {
         this.ability = ability;
@@ -29,17 +23,6 @@ public class ProcessAbility {
 
         return processStatus;
     }
-
-    public String getCharacters(Account account) {
-        this.account = account;
-        connector.createConnectionToDb();
-        String GET_CHARACTERS = "SELECT * FROM SGS_CHARACTERS WHERE (ACC_ID = "+ account.getAccountId() +");";
-        resultSet = connector.insertQueryStatement(GET_CHARACTERS);
-        System.out.println(resultSet);
-
-        return processStatus;
-    }
-
 
     private String UpdateAbility(Ability ability, Character character) {
         return processStatus;
