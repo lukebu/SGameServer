@@ -1,6 +1,6 @@
-package com.lukebu.sgs.services.interfaces.impl.accounts;
+package com.lukebu.sgs.services.impl.accounts;
 
-import com.lukebu.sgs.services.interfaces.interfaces.IRegisterService;
+import com.lukebu.sgs.services.interfaces.accounts.IRegisterService;
 import org.springframework.stereotype.Service;
 
 @Service

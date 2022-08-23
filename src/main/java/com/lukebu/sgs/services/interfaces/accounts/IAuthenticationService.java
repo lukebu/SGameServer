@@ -1,4 +1,4 @@
-package com.lukebu.sgs.services.interfaces.interfaces;
+package com.lukebu.sgs.services.interfaces.accounts;
 
 public interface IAuthenticationService {
 

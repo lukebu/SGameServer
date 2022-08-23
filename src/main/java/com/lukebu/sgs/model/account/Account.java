@@ -1,17 +1,22 @@
 package com.lukebu.sgs.model.account;
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "SGS_USERS")
 public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ACC_ID")
     private int accountId;
+    @Column(name = "ACC_NAME")
     private String accountName;
-    @OneToOne
+    @Column(name = "ACC_AVATAR_ID")
     private int avatarId;
+    @Column(name = "ACC_COUNTRY_CODE")
     private String countryCode;
+    @Column(name = "ACC_EMAIL")
     private String accountEmail;
+    @Column(name = "ACC_PASSWORD")
     private String accountPassword;
 
     private Account(){
